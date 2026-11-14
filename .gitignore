@@ -1,0 +1,11 @@
+# File di sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# File temporanei di editor
+*.swp
+*.swo
+*~
+.vscode/*
+!.vscode/settings.json

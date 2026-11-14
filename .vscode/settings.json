@@ -1,0 +1,8 @@
+{
+  "search.exclude": {
+    "**/assets": true,
+    "**/.git": true
+  },
+  "files.autoSave": "onFocusChange",
+  "markdown.preview.breaks": true
+}
