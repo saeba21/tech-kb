@@ -1,3 +1,10 @@
+## Install
+### Bypass windows login
+Press MAIUSC+F10
+```powershell
+start ms-cxh:localonly
+```
+
 ### Wifi
 **Save Password WiFi**
 ```powershell

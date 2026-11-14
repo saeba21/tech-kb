@@ -138,7 +138,32 @@ Clean obsolete images:
 sudo docker image prune -f
 ```
 
----
+
+## 5.1 Update
+
+create script in opt: update-streamio.sh
+
+```sh
+#!/bin/bash
+
+LOG_FILE="/opt/qbittorrent/qbittorrent-update.log"
+DATA=$(date '+%Y-%m-%d %H:%M:%S')
+
+cd /opt/qbittorrent || { echo "[$DATA] ERRORE: Cartella /opt/qbittorrent non trovata" >> "$LOG_FILE"; exit 1; }
+
+# Controlla aggiornamenti, ricrea se necessario, forza il riavvio per pulizia RAM e rimuove vecchie immagini
+if /usr/bin/docker compose pull -q && /usr/bin/docker compose up -d && /usr/bin/docker compose restart && /usr/bin/docker image prune -f > /dev/null 2>&1; then
+    echo "[$DATA] OK - Controllo/aggiornamento e riavvio completati" >> "$LOG_FILE"
+else
+    echo "[$DATA] ERRORE - Problema durante l'aggiornamento o il riavvio" >> "$LOG_FILE"
+fi
+```
+
+after create a crontab for every night at 3 am
+
+```sh
+0 3 * * * /opt/qbittorrent/update-stereamio.sh > /dev/null 2>&1
+```
 
 ## 6. Endpoints & Access
 * **HTTP Endpoint:** `http://<HOST_IP>:11470`
