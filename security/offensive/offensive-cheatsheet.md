@@ -1162,7 +1162,7 @@ stty -a | head -n1 | cut -d ';' -f 2-3 | cut -b2- | sed 's/; /**
 ---
 **LD_PRELOAD Exploitation**
 LD_PRELOAD is a function that allows any program to use shared libraries
-<img src="media/ld-preload.png"
+<img src="../../assets/images/ld-preload.png"
 style="" />
 Check for LD_PRELOAD (with the env_keep option)
 Write a simple C code compiled as a share object (.so extension) file
@@ -1957,7 +1957,7 @@ wfuzz -c -w /usr/share/seclists/Fuzzing/LFI/LFI-LFISuite-pathtotest-huge.txt --h
 
 ### Object Relational Mapping (ORM) Injection
 ORM is a programming technique that facilitates data conversion between incompatible systems using object-oriented programming languages. It allows developers to interact with a database using the programming language's native syntax, making data manipulation more intuitive and reducing the need for extensive SQL queries. ORM is particularly beneficial when complex data interactions are required, as it simplifies database access and promotes code reusability. 
-<img src="media/orm.png"
+<img src="../../assets/images/orm.png"
 style="" />
 
 **Commonly Used ORM Frameworks**
@@ -2305,7 +2305,7 @@ x86_64-w64-mingw32-gcc myDLL.cpp --shared -o myDLL.dll
 PsExec64.exe -i -s regedit
 HKLM\SAM\SAM\Domains\Account\Users
 ```
-<img src="media/rid-hijacking.png"
+<img src="../../assets/images/rid-hijacking.png"
 style="" />
 We will now replace those two bytes with the RID of Administrator in hex (500 = 0x01F4), switching around the bytes (F401)
 
