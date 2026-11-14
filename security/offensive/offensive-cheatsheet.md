@@ -2090,7 +2090,7 @@ Reference: [33c3ctf writeup](https://secgroup.github.io/2017/01/03/33c3ctf-write
 - [Atlas — WAF bypass suggester](https://github.com/m4ll0k/Atlas)
 
 ### XXE
-<img src="media/image3.png"
+<img src="../../assets/images/image3.png"
 style="width:5.99269in;height:4.79167in" />
 **Injection IN-BAND XXE**
 
