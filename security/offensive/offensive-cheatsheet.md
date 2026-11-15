@@ -322,6 +322,9 @@ hashcat -m 13400 keepass.hash /usr/share/wordlists/rockyou.txt -r /usr/share/has
 SQL injection is a web security vulnerability that allows an attacker to interfere with the queries that an application makes to its database. It generally allows an attacker to view data they are not normally able to retrieve, including data belonging to other users or any data the application itself can access. In many cases, an attacker can modify or delete this data, causing persistent changes to the application's content or behaviour.
 The first thing to do is find how to inject data without breaking the query, identify how to escape from the current context.
 
+<img src="../../assets/images/type-sql-injection.png"
+style="" />
+
 ```bash
  [Nothing]
 '
@@ -1760,6 +1763,8 @@ echo manager >> community
 for ip in \$(seq 1 254); do echo 192.168.50.\$ip; done \> ips
 onesixtyone -c community -i ips
 ```
+<img src="../../assets/images/SNMP-Windows-MIB.png"
+style="" />
 
 ---
 
@@ -2090,7 +2095,7 @@ Reference: [33c3ctf writeup](https://secgroup.github.io/2017/01/03/33c3ctf-write
 - [Atlas — WAF bypass suggester](https://github.com/m4ll0k/Atlas)
 
 ### XXE
-<img src="../../assets/images/image3.png"
+<img src="../../assets/images/XXE-entity.png"
 style="width:5.99269in;height:4.79167in" />
 **Injection IN-BAND XXE**
 
@@ -2308,6 +2313,8 @@ HKLM\SAM\SAM\Domains\Account\Users
 <img src="../../assets/images/rid-hijacking.png"
 style="" />
 We will now replace those two bytes with the RID of Administrator in hex (500 = 0x01F4), switching around the bytes (F401)
+<img src="../../assets/images/rid-hijacking2.png"
+style="" />
 
 **SeBackup / SeRestore Privilege**
 ```powershell
